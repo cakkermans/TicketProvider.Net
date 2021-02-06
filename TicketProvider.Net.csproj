@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44D6B1D9-67A0-49B2-A45A-6D6EB6CFB2E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TicketProvider.Net</RootNamespace>
+    <AssemblyName>TicketProvider.Net</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayUtilities.cs" />
+    <Compile Include="AsyncResult.cs" />
+    <Compile Include="AsyncResultVoid.cs" />
+    <Compile Include="Dns\DnsResolver.cs" />
+    <Compile Include="Dns\Records\AAAARecord.cs" />
+    <Compile Include="Dns\Records\CNAMERecord.cs" />
+    <Compile Include="Dns\Records\MXRecord.cs" />
+    <Compile Include="Dns\Records\NSRecord.cs" />
+    <Compile Include="Dns\ResolverSession.cs" />
+    <Compile Include="Dns\ResolverTransport.cs" />
+    <Compile Include="Dns\ResponseReader.cs" />
+    <Compile Include="Dns\DnsException.cs" />
+    <Compile Include="Dns\HeaderFlags.cs" />
+    <Compile Include="Dns\HeaderOpCode.cs" />
+    <Compile Include="Dns\HeaderResponseCode.cs" />
+    <Compile Include="Dns\Query.cs" />
+    <Compile Include="Dns\Records\ARecord.cs" />
+    <Compile Include="Dns\Records\UnknownRecord.cs" />
+    <Compile Include="Dns\Request.cs" />
+    <Compile Include="Dns\Resolver.cs" />
+    <Compile Include="Dns\ResourceRecord.cs" />
+    <Compile Include="Dns\ResourceRecordClass.cs" />
+    <Compile Include="Dns\ResourceRecordType.cs" />
+    <Compile Include="Dns\Header.cs" />
+    <Compile Include="Dns\Response.cs" />
+    <Compile Include="Mail\EmailAddressCollection.cs" />
+    <Compile Include="Mail\ImfReader.cs" />
+    <Compile Include="Mail\ImfWriter.cs" />
+    <Compile Include="Mail\MailException.cs" />
+    <Compile Include="Mail\MailMessage.cs" />
+    <Compile Include="Mail\EmailValidatorMxServer.cs" />
+    <Compile Include="Mail\EmailValidatorResult.cs" />
+    <Compile Include="Mail\EmailValidator.cs" />
+    <Compile Include="Mail\EmailAddress.cs" />
+    <Compile Include="Mail\EmailValidatorSession.cs" />
+    <Compile Include="Mail\IEmailSerializible.cs" />
+    <Compile Include="Mail\MessageId.cs" />
+    <Compile Include="Mail\MessageIdCollection.cs" />
+    <Compile Include="Mail\MimeEncoding.cs" />
+    <Compile Include="Mail\Mime\IMimeEncoder.cs" />
+    <Compile Include="Mail\Mime\IMimeObject.cs" />
+    <Compile Include="Mail\Mime\MimeBase64Encoder.cs" />
+    <Compile Include="Mail\Mime\MimeContainer.cs" />
+    <Compile Include="Mail\Mime\MimeContent.cs" />
+    <Compile Include="Mail\Mime\MimeNullEncoder.cs" />
+    <Compile Include="Mail\Mime\MimeVersion.cs" />
+    <Compile Include="Mail\Rfc5422DateTime.cs" />
+    <Compile Include="Mail\SerializedEmailMessage.cs" />
+    <Compile Include="Mail\Sinks\FolderSink.cs" />
+    <Compile Include="Mail\Sinks\StreamSink.cs" />
+    <Compile Include="Mail\Sinks\IMessageSink.cs" />
+    <Compile Include="Mail\Sinks\SmtpSink.cs" />
+    <Compile Include="Mail\Smtp\Commands\DATACommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\DATAContentCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\EHLOCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\EXPNCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\HELOCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\HELPCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\InvalidUnknownCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\MAILCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\NOOPCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\QUITCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\RCPTCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\RSETCommand.cs" />
+    <Compile Include="Mail\Smtp\Commands\VRFYCommand.cs" />
+    <Compile Include="Mail\EmailValidatorResultState.cs" />
+    <Compile Include="Mail\Smtp\SmtpClient.cs" />
+    <Compile Include="Mail\Smtp\SmtpCommand.cs" />
+    <Compile Include="Mail\Smtp\SmtpCommandDeserializer.cs" />
+    <Compile Include="Mail\Smtp\SmtpCommandType.cs" />
+    <Compile Include="Mail\Smtp\SmtpException.cs" />
+    <Compile Include="Mail\Smtp\SmtpExtendedReplyCode.cs" />
+    <Compile Include="Mail\Smtp\SmtpReply.cs" />
+    <Compile Include="Mail\Smtp\SmtpReplyCode.cs" />
+    <Compile Include="Mail\Smtp\SmtpServer.cs" />
+    <Compile Include="Mail\Smtp\SmtpServerSession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
