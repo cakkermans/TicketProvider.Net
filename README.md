@@ -1,5 +1,5 @@
 # TicketProvider.Net
-.NET network libraries for DNS, SMTP and MIME written originally around 2010. The overall goal of these library was to be able to deliver email right to the mail server of the recipient, avoiding the need to rely on any intermediate SMTP server.
+.NET network libraries for DNS, SMTP and IMF (mail) written originally around 2010. The overall goal of these library was to be able to deliver email right to the mail server of the recipient, avoiding the need to rely on any intermediate SMTP server.
 
 # DNS client
 This library contains a RFC 2929 compliant DNS client implementation. It offers both synchronous as well as asynchronous methods to query DNS server and to resolve hostnames to IP addresses. It was built to cover the lack of support for querying DNS servers using the .NET Framework at that time.
@@ -78,11 +78,19 @@ At the time of writing (2021), I rarely see deep email address validation in the
 
 ## SMTP
 
-Both a SMTP client and server are implemented.
+Both a SMTP client and server are implemented. A command - reply oriented architecture is followed, where every command is inplemented in a dedicated class.
 
 ### SMTP client
 
 ### SMTP server
+
+SmtpServer creates and exposes a SmtpServerSession for every client connecting it.
+
+### Async support
+
+For all methods variants are implement using the asynchronous programming model via the `Begin...()` and `End...()` naming convention.
+
+_Again, this was long before the introduction of the async and await keywords_
 
 ## IMF
 
@@ -90,7 +98,7 @@ A writer for the RFC5322 internet message format specification is implemented. T
 
 ## MIME
 
-Some basic scaffoling for MIME support can be found 
+Some basic scaffolding for MIME support can be found 
 
 ## Message sinks
 
